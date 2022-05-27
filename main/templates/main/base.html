@@ -1,0 +1,23 @@
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'basestyle.css'%}" type="text/css">
+
+    <title>{% block title %}Stronka Matiego!{% endblock%}</title>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="/#">Home</a>
+        <a href="/register">Register</a>
+        <a href="/1">View list</a>
+    </div>
+
+    <div id="context", name="context" class="context">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

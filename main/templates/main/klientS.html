@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+
+{% block content%}
+    <h1>{{k.imie}}</h1>
+    <ul>
+        <li>{{k.nazwisko}}</li>
+        <li>{%if k.wiek == None %}Nie podano{% else%}{{k.wiek}}{%endif%}</li>
+    </ul>
+{% endblock%}

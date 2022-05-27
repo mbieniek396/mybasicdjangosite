@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Zarejestruj się{% endblock%}
+
+{% block content %}
+Zarejestruj się
+<form method="post" action="/register/">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit", name="save">Zarejestruj</button>
+</form>
+{% endblock %}

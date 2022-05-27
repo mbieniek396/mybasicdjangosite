@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block content%}
+    <h1>{{le.name}}</h1>
+    <form method="post" action="#"> 
+        {% csrf_token%}
+        <ul>
+            {% for item in le.item_set.all %}
+                {% if item.complete%}
+                    <li><input type="checkbox" value="delete" name="d{{item.id}}">Delete {{item.text}}<input type="checkbox" value="clicked" name="c{{item.id}}" checked></li>
+                {%else%}
+                    <li><input type="checkbox" value="delete" name="d{{item.id}}">Delete {{item.text}}<input type="checkbox" value="clicked" name="c{{item.id}}"></li>
+                {% endif%}
+            {%endfor%}
+            
+        </ul>
+        <button type="submit" name="save" value="save">Save</button>
+        <input type="text" name="newItemName">
+        <button type="submit" name="nItem" value="nItem">Add a new item</button>
+    </form>
+{% endblock%}
