@@ -7,15 +7,15 @@
         <ul>
             {% for item in le.item_set.all %}
                 {% if item.complete%}
-                    <li><input type="checkbox" value="delete" name="d{{item.id}}">Delete {{item.text}}<input type="checkbox" value="clicked" name="c{{item.id}}" checked></li>
+                    <li><button class="delListItemButton" type="submit" name="delete" value="delI{{item.id}}">X</button>{{item.text}}<input type="checkbox" value="clicked" name="c{{item.id}}" checked></li>
                 {%else%}
-                    <li><input type="checkbox" value="delete" name="d{{item.id}}">Delete {{item.text}}<input type="checkbox" value="clicked" name="c{{item.id}}"></li>
+                    <li><button class="delListItemButton" type="submit" name="delete" value="delI{{item.id}}">X</button>{{item.text}}<input type="checkbox" value="clicked" name="c{{item.id}}"></li>
                 {% endif%}
             {%endfor%}
             
         </ul>
         <button type="submit" name="save" value="save">Save</button>
-        <input type="text" name="newItemName">
+        <input class="NewItemInput" placeholder="Nowe zadanie" type="text" name="newItemName">
         <button type="submit" name="nItem" value="nItem">Add a new item</button>
     </form>
 {% endblock%}

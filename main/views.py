@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from main.models import ToDoList, Item, Klient
@@ -23,6 +24,8 @@ def v1(request, nr):
                 item.save()
                 if request.POST.get(f"d{item.id}"):
                     item.delete()
+        elif request.POST.get("delete"):
+            list.item_set.get(id=request.POST.get("delete")[4:]).delete()
         elif request.POST.get("nItem"):
             text = request.POST.get("newItemName")
             if len(text) > 2:

@@ -16,14 +16,183 @@
     font-size: 25px;
     display: block;
     color: #d6d876;
+    transition: background-color 0.3s;
 }
 
 .sidenav a:hover {
-    color: #293111;
+    background-color: #555;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin: 5px;
+}
+
+
+.delListItemButton{
+    margin-right: 10px;
+    background-color: transparent;
+    color: red;
+    padding: 5px;
+}
+
+.NewItemInput{
+    font-size: 16px;
+    background-color: #777;
+    border-left: 3px solid orange;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.NewItemInput::placeholder{
+    color: black;
+}
+
+.delListItemButton:hover{
+    background-color: rgb(250, 98, 98);
+}
+
+.ytVideo{
+    margin-top: 20px;
+    padding: 0;
+    width: 500px;
+}
+
+.ytVideoImg{
+    height: 250px;
+}
+
+
+.ytVideoProf{
+    width: 75px;
+    border-radius: 100%;
+    margin-top: 10px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.ytVideoChannel{
+    display: block;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.ytVideoChannel a{
+    color:rgb(151, 151, 151);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.ytVideoChannel a:hover{
+    opacity: 0.6;
+}
+
+.ytVideBio{
+    height:150px;
+    margin: 0;
+    padding: 0;
+}
+
+.ytVideoInfo{
+    font-size: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ytVideoTitle{
+    color: rgb(234, 233, 233);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.ytVideoVideo{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.ytVideoViews{
+    display: inline-block;
+    margin-top: 0;
+    padding: 0px;
+    color:rgb(151, 151, 151);
+    font-style: italic;
+}
+
+.IgFollow {
+    background-color: aliceblue;
+    width: 200px;
+    box-shadow: 0 0 10px 5px #111;
+}
+
+.IgFollowNotPhoto{
+    padding: 10px;
+}
+
+.IGFPhoto{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.IGTitle{
+    color: #111;
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.IGSRphoto{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.IGSRtext{
+    color: #777;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+.IGAdd{
+    background-color: rgb(36, 77, 214);
+    color: #fff;
+}
+
+
+button{
+    background-color: rgb(38, 178, 59);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+button:hover{
+    background-color: rgb(181, 221, 135);
+    cursor: pointer;
 }
 
 .context{
+    padding: 10px;
+    margin: 0px;
     margin-left: 150px;
-    color: #777777;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+      color: #222;    
+      background-color: #555;
+      padding: 0;
+      margin: 0;
 }

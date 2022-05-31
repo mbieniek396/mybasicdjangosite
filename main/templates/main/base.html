@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     {% load static %}
@@ -17,6 +18,32 @@
     <div id="context", name="context" class="context">
         {% block content %}
         {% endblock %}
+        <div style="display: grid; grid-template-columns: 1fr 1fr; justify-items: center;">
+            <div class="ytVideo">
+                <div class="ytVideoImg">
+                    <img class="ytVideoVideo" src="{% static 'video.webp'%}">
+                </div>
+                <div class="ytVideBio" style="margin-left: 10px;column-gap: 20px; display: grid; grid-template-columns: 75px 1fr;">
+                    <img class="ytVideoProf" src="{% static 'landscape.jpg'%}">
+                    <div class=ytVideoInfo>
+                        <p class=ytVideoTitle>Zbudował dom za 65 tys. zł pod klucz. Na 50m2 dwie...</p>
+                        <span class=ytVideoChannel><a href=https://www.youtube.com/watch?v=F5BwKPADYps&ab_channel=Pomys%C5%82NaDom>Pomysł na dom</a></span>
+                        <p class=ytVideoViews>976 tys. wyświetleń &#183; 1 miesiąc temu</p>
+                    </div>
+                </div>
+            </div>
+            <div class="IgFollow">
+                <img class="IGFPhoto" src="{% static 'landscape.jpg'%}">
+                <div class="IgFollowNotPhoto">
+                    <span class="IGTitle">Marcin</span>
+                    <div class="IGSecRow">
+                        <img class="IGSRphoto" src="{% static 'video.webp'%}">
+                        <span class="IGSRtext">4 mutual friends</span>
+                        <button class="IGAdd" type="button">Add Friend</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
